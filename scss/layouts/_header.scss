@@ -1,0 +1,166 @@
+header {
+  height: 1152px;
+}
+.nav {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    // justify-content: space-around;
+    // padding: 30px 48px 0px 44px;
+  }
+  &__logo {
+    padding-right: 120px;
+  }
+  &__list {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    padding-right: 20px;
+  }
+  &__button {
+    width: 156px;
+    // padding: 11px 24px;
+    // border: 1px solid black;
+    border: none;
+    background: transparent;
+  }
+  &__button::before {
+    content: "" url(../../assets/icons/Layer\ 3.svg);
+    position: relative;
+    bottom: 26px;
+    left: 49px;
+  }
+  &__button::after {
+    content: "" url(../../assets/icons/Layer\ 4.svg);
+    position: relative;
+    top: 26px;
+    right: 48.5px;
+  }
+  &__img {
+    position: relative;
+    top: -30px;
+    right: 0px;
+  }
+  &__btn {
+    width: 115px;
+    position: relative;
+    top: 25px;
+    right: 44px;
+  }
+  &__nav{
+    display: none;
+  }
+}
+@include mobile() {
+  .nav {
+    &__wrapper{
+      justify-content: start;
+    }
+    &__list{
+      display: none;
+    }
+    &__nav{
+      display: block;
+    }
+    &__btn{
+      display: none;
+    }
+    &__logo{
+      padding:0 70px 0 48px;
+    }
+    &__sub-nav{
+      padding: 9px 13px 8px 13px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 400;
+      border: 1px solid white;
+      background: transparent;
+
+    }
+  }
+}
+.hero {
+  &__title {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 40px 0 64px 0;
+  }
+  &__info {
+    font-family: Forum;
+    font-size: 197.95px;
+    font-weight: 400;
+    line-height: 128.55px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+
+    span {
+      font-family: Forum;
+      font-size: 141.61px;
+      font-weight: 400;
+      line-height: 141.61px;
+      letter-spacing: 0.04em;
+      text-align: center;
+      text-transform: uppercase;
+      color: white;
+      position: relative;
+      z-index: 5;
+    }
+  }
+  &__button {
+    font-size: 26px;
+    font-weight: 400;
+    padding: 12px 46px;
+    border-radius: 40px;
+    text-transform: uppercase;
+    border: none;
+    background: white;
+  }
+  &__btn {
+    position: relative;
+    left: 340px;
+    top: 40px;
+    z-index: 12;
+  }
+  &__img {
+    position: relative;
+    top: 12px;
+    right: 300px;
+  }
+  &__sub {
+    position: relative;
+    left: 192px;
+    bottom: 50px;
+  }
+}
+@include mobile() {
+  .hero {
+    &__button {
+      position: relative;
+      right: 324px;
+      top: 50px;
+    }
+    &__img {
+      position: relative;
+      top: -18px;
+      right: 303px;
+    }
+    &__sub{
+      position: relative;
+      top: 35px;
+      left: -188px;
+    }
+    &__info{
+      font-size: 72px;
+      line-height: 50px;
+      span{
+        font-size: 72px;
+        line-height: 50px;
+      }
+
+    }
+  }
+}
